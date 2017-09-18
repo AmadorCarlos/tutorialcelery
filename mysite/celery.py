@@ -1,8 +1,10 @@
+from __future__ import absolute_import, unicode_literals
+
 import os
-from celery import celery
+from celery import Celery
 
-os.environ.setdefault('DJANDO_SETTINGS_MODULE', 'mysite.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 
-app = celery ('mysite')
+app = Celery ('mysite')
 app.config_from_object ('django.conf:settings', namespace = 'CELERY')
 app.autodiscover_tasks()

@@ -6,9 +6,9 @@ from celery import shared_task
 
 @shared_task
 def create_random_user_accounts(total):
-	for i in range (total)
+	for i in range (total):
 		username = 'user_{}'.format(get_random_string(10, string.ascii_letters))
-		email = '{}@example.com' .format(username)
+		email = '{}@example.com'.format(username)
 		password = get_random_string (50)
 		User.objects.create_user(username=username, email=email, password = password)
-	return '{} los usuarios aletorios fueron creados exitosamente!' .Format (total)
+	return '{} los usuarios aletorios fueron creados exitosamente!'.format (total)
