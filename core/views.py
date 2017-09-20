@@ -17,5 +17,5 @@ class  GenerateRandomUserForm(FormView):
 		total = form.cleaned_data.get ('total')
 		create_random_user_accounts.delay(total)
 		messages.success (self.request, 'Estamos generando tu usuaruio aleatorio! Espera un momento y refresca esta pagina.')
-		return redirect ('useers_list')
+		return redirect ('users_list')
 		
