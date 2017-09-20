@@ -10,7 +10,7 @@ from .forms import GenerateRandomUserForm
 from .tasks import create_random_user_accounts
 
 class  GenerateRandomUserForm(FormView):
-	template_name = 'core/generate_random_users.html'
+	template_name = 'generate_random_users.html'
 	form_class = GenerateRandomUserForm
 
 	def form_valid(self, form):
