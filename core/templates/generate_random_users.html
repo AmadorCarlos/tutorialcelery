@@ -1,4 +1,17 @@
-<form action="" method="post">{% csrf_token %}
+<html>
+    <head>
+        <title>Django Celery Example</title>
+<h1>Django Celery Example</h1>
+
+<form>
     {{ form.as_p }}
     <input type="submit" value="Total" />
 </form>
+	<body>
+	{% block content%}
+
+	{%endblock%}
+
+	</body>
+	
+</head>

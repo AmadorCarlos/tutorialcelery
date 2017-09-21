@@ -1,0 +1,10 @@
+<!--<h1>User List</h1>
+{{user_list}}-->
+{% extends 'user_list.html' %}
+{% block content %}
+<ul>
+{% for user in user_list %}
+    <li>{{ user.username }}, {{user.email}}</li>
+{% endfor %}
+</ul>
+{% endblock %}
