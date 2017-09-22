@@ -5,5 +5,5 @@ from .views import UsersListView
 
 urlpatterns = [
     url(r'templates/$', GenerateRandomUserForm.as_view(), name='GenerateRandomUserForm'),
-    url(r'users/$', UsersListView.as_view(), name='UsersListView'),
+    url(r'users/$', UsersListView.as_view(), name='userlist'),
 ]
